@@ -7,8 +7,8 @@
     </mat-toolbar>
 
     <div *ngIf="courses$ | async as courses; else loading">
-    <table mat-table [dataSource]="courses" class="mat-elevation-z8">
-
+    <table mat-table  [dataSource]="courses" class="mat-elevation-z8">
+      <caption>Cursos disponíveis</caption>
       <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
 
@@ -21,8 +21,8 @@
       <!-- categoria Column -->
       <ng-container matColumnDef="categoria">
         <th mat-header-cell *matHeaderCellDef> Categoria </th>
-        <td mat-cell *matCellDef="let course"> {{ course.categoria }}
-          <mat-icon aria-hidden="false" aria-label="categoria do curso" fontIcon="{{ course.categoria | category }}"></mat-icon>
+        <td mat-cell *matCellDef="let course"> {{ course.category }}
+          <mat-icon aria-hidden="false" aria-label="categoria do curso" fontIcon="{{ course.category | category }}"></mat-icon>
         </td>
       </ng-container>
 
